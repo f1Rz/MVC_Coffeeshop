@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "datapicker";
+}
+
+<script src="~/Scripts/controllers/ProductsController.js"></script>
+
+<h2>Calendar</h2>
+<div ng-controller="ProductsController" ng-init="getDateList()">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="date in dateList">
+                <td>{{date.ID}}</td>
+                <td>{{convertDateFromServer(date.Date)}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-sm-4">
+            <input datepicker type="text" class="form-control" ng-model="date.lDate" />
+
+        </div>
+        <div class="col-sm-4">
+            <button ng-click="addTempDate(date)">Submit</button>
+
+        </div>
+
+    </div>
+</div>

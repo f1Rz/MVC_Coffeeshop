@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+}
+<script src="~/Scripts/controllers/ProductsController.js"></script>
+
+<h2>AddProduct</h2>
+<div ng-controller="ProductsController">
+    <form ng-submit="addProduct()">
+        <div class="row">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" ng-model="newProduct.Name" />
+            </div>
+        </div>
+        <button type="submit">Add</button>
+    </form>
+</div>

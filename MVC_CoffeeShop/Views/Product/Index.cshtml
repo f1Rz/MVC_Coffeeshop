@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Products";
+}
+<script src="~/Scripts/controllers/ProductsController.js"></script>
+
+<div ng-controller="ProductsController" ng-init="getProductList()">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="prod in productsList">
+                <td>{{prod.ID}}</td>
+                <td>{{prod.Name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
